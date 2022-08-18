@@ -11,7 +11,7 @@ function shuffle(array) {
     return array;
   }
   
-  function Question({ question, setCurrentQ, setScore }) {
+  function Question({ question, setCurrentQ, setScore, currentQ }) {
   
     function onClickFunction(e) {
       const id = e.target.id;
@@ -24,8 +24,12 @@ function shuffle(array) {
     }
   
     return (
-      <div>
-        <h2 className='font-semibold text-xl'>{question.question}</h2>
+      <div className="border-2 border-green-500 rounded-xl bg-green-800 p-2">
+        <div>
+        <h2 className='font-semibold text-xl pb-2'>
+          {`${currentQ}. ${question.question} (${question.points})`}
+          </h2>
+        </div>
         <div className='space-y-2'>
           {shuffle(question.answers.map((i) =>
             <div key={i.id}

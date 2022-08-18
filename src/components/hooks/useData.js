@@ -3,8 +3,12 @@ import { useEffect, useState } from "react";
 const quizData = [
     {
         title: 'The Amazing Dinosaur Quiz',
-        description: 'Test you dino knowledge with this fun quiz.',
-        id: 'kjdd8f9ds8f',
+        description: 'Test you knowledge with this fun quiz.',
+        id: 'f98dhh08g0h',
+        theme: {
+            badgeBgColor: 'bg-amber-800',
+            badgeHoverColor: 'hover:bg-amber-900',
+        },
         questions: [
             {
                 question: 'What is the tallest dinosaur?',
@@ -99,7 +103,213 @@ const quizData = [
                 ]
             },
         ]
-    }
+    },
+    {
+        title: 'Where in the World?',
+        description: 'Do you know where animals live.',
+        id: '87d9f7df897fd',
+        theme: {
+            badgeBgColor: 'bg-teal-800',
+            badgeHoverColor: 'hover:bg-teal-900',
+        },
+        questions: [
+            {
+                question: 'Where do lions live?',
+                correctAnswer: 'f8d09g8g',
+                points: 5,
+                answers: [
+                    {
+                        id: 'f8d09g8g',
+                        answer: 'Africs',
+                    },
+                    {
+                        id: '0g9d9g09dg',
+                        answer: 'Asia',
+                    },
+                    {
+                        id: 'sf09f9scf9',
+                        answer: 'North America',
+                    },
+                    {
+                        id: 'dfcf90dv90',
+                        answer: 'Europe',
+                    },
+                ]
+            },
+            {
+                question: 'Where will you find kangaroos?',
+                correctAnswer: '0g9dfjxs8x',
+                points: 10,
+                answers: [
+                    {
+                        id: 'sf09csf9c',
+                        answer: 'Antarctica',
+                    },
+                    {
+                        id: 'ds8f08sdf8',
+                        answer: 'New Zealand',
+                    },
+                    {
+                        id: '0g9dfjxs8x',
+                        answer: 'Australia',
+                    },
+                    {
+                        id: '9x0s90dx9',
+                        answer: 'Brazil',
+                    },
+                ]
+            },
+            {
+                question: 'Where do penguins call hame?',
+                correctAnswer: 'df8sxd0sf8',
+                points: 15,
+                answers: [
+                    {
+                        id: 'sdxs09x0x',
+                        answer: 'Arctic',
+                    },
+                    {
+                        id: 'd0c9s08c0a',
+                        answer: 'Greenland',
+                    },
+                    {
+                        id: 'sa8d9sd',
+                        answer: 'Europe',
+                    },
+                    {
+                        id: 'df8sxd0sf8',
+                        answer: 'Southern Hemisphere',
+                    },
+                ]
+            },
+            {
+                question: 'Where will you find ?',
+                correctAnswer: 'df5s345df',
+                points: 20,
+                answers: [
+                    {
+                        id: '5sdf543s',
+                        answer: 'Cows',
+                    },
+                    {
+                        id: 'sd7f98ds7f65',
+                        answer: 'Fish',
+                    },
+                    {
+                        id: 'df5s345df',
+                        answer: 'Birds',
+                    },
+                    {
+                        id: 's8f9s87df98s',
+                        answer: 'Insects',
+                    },
+                ]
+            },
+        ]
+    },
+    {
+        title: 'All About Animals',
+        description: 'How well do you know animals?',
+        id: 'kjdds7987s9797',
+        theme: {
+            badgeBgColor: 'bg-green-800',
+            badgeHoverColor: 'hover:bg-green-900',
+        },
+        questions: [
+            {
+                question: 'What is the worlds biggest animal?',
+                correctAnswer: 'cvv8xc8v0x',
+                points: 5,
+                answers: [
+                    {
+                        id: 'cvv8xc8v0x',
+                        answer: 'Antarctic blue whale',
+                    },
+                    {
+                        id: 'df9s0fsdf',
+                        answer: 'Elephant',
+                    },
+                    {
+                        id: 's9adas80a8d',
+                        answer: 'Giant Squid',
+                    },
+                    {
+                        id: '08sdf0s8df908d',
+                        answer: 'Giraffe',
+                    },
+                ]
+            },
+            {
+                question: 'Which animal is nocturnal?',
+                correctAnswer: '0asdas09d',
+                points: 10,
+                answers: [
+                    {
+                        id: 'sd0f9sdf',
+                        answer: 'Rabbit',
+                    },
+                    {
+                        id: 'df809s8f',
+                        answer: 'Zebra',
+                    },
+                    {
+                        id: '0asdas09d',
+                        answer: 'Python',
+                    },
+                    {
+                        id: '08sdf0s8da8s',
+                        answer: 'Deer',
+                    },
+                ]
+            },
+            {
+                question: 'What is animal is called man\'s best friend?',
+                correctAnswer: 'sa98afa0',
+                points: 15,
+                answers: [
+                    {
+                        id: 'ds98f09',
+                        answer: 'Cows',
+                    },
+                    {
+                        id: '98cd8d3',
+                        answer: 'Tigers',
+                    },
+                    {
+                        id: 'sa98afa0',
+                        answer: 'Dogs',
+                    },
+                    {
+                        id: 'a8ds7as8f',
+                        answer: 'Pigs',
+                    },
+                ]
+            },
+            {
+                question: 'What bird can\'t fly?',
+                correctAnswer: 'd89fa0s8f0',
+                points: 20,
+                answers: [
+                    {
+                        id: 'd89fa0s8f0',
+                        answer: 'Penguin',
+                    },
+                    {
+                        id: 'a0f98dfs',
+                        answer: 'Crow',
+                    },
+                    {
+                        id: 'ds9f80d',
+                        answer: 'Pigeon',
+                    },
+                    {
+                        id: 'as8f07sdf9',
+                        answer: 'Goose',
+                    },
+                ]
+            },
+        ]
+    },
 ];
 
 const REQUEST_STATUS = {
