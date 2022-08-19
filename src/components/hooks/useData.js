@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { db } from '../../firebase';
+import { getDocs, collection, query, where } from 'firebase/firestore';
 
 const quizData = [
     {
@@ -24,7 +26,7 @@ const quizData = [
                         answer: 'Triceratops',
                     },
                     {
-                        id: 'dsf9-s8f08df',
+                        id: 'dsf9s8f08df',
                         answer: 'Spinosaurus',
                     },
                     {
@@ -47,7 +49,7 @@ const quizData = [
                         answer: 'Struthiomimus',
                     },
                     {
-                        id: 'sdf09s-0df9',
+                        id: 'sdf09s0df9',
                         answer: 'Giganotosaurus',
                     },
                     {
@@ -74,7 +76,7 @@ const quizData = [
                         answer: 'Fossils',
                     },
                     {
-                        id: '08sdf0s8da8s09d8as8df908d',
+                        id: '08sdf0s8da8',
                         answer: 'Mounds',
                     },
                 ]
@@ -329,18 +331,21 @@ function useData(id = null) {
 
     useEffect(() => {
         const getData = async () => {
-            await delay(1000);
+            //await delay(1000);
             try {
-                let result = [];
                 if (id) {
-                    result = quizData.find((i) =>
-                        i.id === id
-                    );
-                    setData(result);
+                    const q = query(collection(db, `question`), where('quizId', '==', id));
+                    const querySnapshot = await getDocs(q);
+                    setData(querySnapshot.docs.map((doc) => {
+                        return { id: doc.id, ...doc.data() };
+                    }));
                 } else {
-                    result = quizData;
+                    const q = query(collection(db, 'quiz'));
+                    const querySnapshot = await getDocs(q);
+                    setData(querySnapshot.docs.map((doc) => {
+                        return { id: doc.id, ...doc.data() };
+                    }));
                 }
-                setData(result);
                 setRequestStatus(REQUEST_STATUS.SUCCESS);
             } catch (e) {
                 setError(e);
@@ -349,7 +354,7 @@ function useData(id = null) {
         }
 
         getData();
-    })
+    }, [])
 
     return { data, requestStatus, error };
 }

@@ -9,7 +9,7 @@ function App() {
       <main className='h-full bg-black overflow-x-auto'>
         <Routes>
           <Route path='/' element={<QuizList />} />
-          <Route path='/quiz/:id' element={<Quiz />} />
+          <Route path='/quiz/:id/:title' element={<Quiz />} />
         </Routes>
       </main>
     </Router>
