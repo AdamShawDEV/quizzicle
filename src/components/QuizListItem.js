@@ -4,7 +4,6 @@ function QuizListItem({ data }) {
   const { id, title, description, theme } = data;
   const navigate = useNavigate();
   const highScore = localStorage.getItem(`highScore${id}`);
-  console.log(highScore);
 
   return (
     <div

@@ -183,25 +183,25 @@ const quizData = [
                 ]
             },
             {
-                question: 'Where will you find ?',
-                correctAnswer: 'df5s345df',
+                question: 'Where will you find Polar bears?',
+                correctAnswer: '98g8sf0g80d',
                 points: 20,
                 answers: [
                     {
-                        id: '5sdf543s',
-                        answer: 'Cows',
+                        id: 'df0d09f0s',
+                        answer: 'Iceland',
                     },
                     {
-                        id: 'sd7f98ds7f65',
-                        answer: 'Fish',
+                        id: 'da98f98f',
+                        answer: 'Canada',
                     },
                     {
-                        id: 'df5s345df',
-                        answer: 'Birds',
+                        id: 'ds98f98dsfd',
+                        answer: 'Norway',
                     },
                     {
-                        id: 's8f9s87df98s',
-                        answer: 'Insects',
+                        id: '98g8sf0g80d',
+                        answer: 'The Arctic',
                     },
                 ]
             },

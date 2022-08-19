@@ -17,6 +17,11 @@ function QuizList() {
         {data.map((i) =>
           <QuizListItem key={i.id} data={i} />
         )}
+        <button
+          className='text-slate-50 hover:underline'
+          onClick={() => { localStorage.clear(); window.location.reload(); }}>
+          clear high scores
+        </button>
       </div>
     </div>
   );
